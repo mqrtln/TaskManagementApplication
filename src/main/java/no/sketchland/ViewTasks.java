@@ -8,7 +8,7 @@ public class ViewTasks {
     public static void viewTasks(Scanner in, HashMap<Integer, Task> map){
         map.forEach(
                 (key, value)
-                        -> System.out.printf("\n=====================\n Task no: %s\n Title: %s\n Description: %s\n Status: %s\n=====================\n", value.id, value.title, value.desc, value.status)
+                        -> System.out.printf(" %s\n=====================\n%s Task no: %s\n Title: %s\n Description: %s\n Status: %s%s%s %s\n=====================\n%s", ConsoleColors.YELLOW, ConsoleColors.RESET, value.id, value.title, value.desc, ConsoleColors.GREEN, value.status, ConsoleColors.RESET, ConsoleColors.YELLOW, ConsoleColors.RESET)
         );
     }
 }
